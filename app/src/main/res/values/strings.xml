@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">AterWeather</string>
+    <string name="app_name">爱特天气</string>
+    <string name="startup">立即使用</string>
 </resources>

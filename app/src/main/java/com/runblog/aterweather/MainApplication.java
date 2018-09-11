@@ -24,21 +24,5 @@ public class MainApplication extends Application {
         //初始化和风天气的账户信息
         HeConfig.init(ApiConfig.WEATHER_AUTH_NAME,ApiConfig.WEATHER_AUTH_KEY);
         HeConfig.switchToFreeServerNode();
-        System.out.println("name->"+HeConfig.getUserId());
-
-        HeWeather.getWeatherNow(this, "CN101010100", Lang.CHINESE_SIMPLIFIED, Unit.METRIC,
-                new HeWeather.OnResultWeatherNowBeanListener() {
-                    @Override
-                    public void onError(Throwable e) {
-                        Log.i("Log", "onError: ", e);
-                    }
-
-                    @Override
-                    public void onSuccess(List dataObject) {
-                        Log.i("Log", "onSuccess: " + new Gson().toJson(dataObject));
-                    }
-                });
     }
-
-
 }
